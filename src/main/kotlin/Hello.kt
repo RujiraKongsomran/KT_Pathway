@@ -11,11 +11,14 @@ fun main() {
     feedTheFish()
 }
 
+fun isTooHot(temp: Int) = temp > 30
+fun isDirty(dirty: Int) = dirty > 30
+fun isSunday(day: String) = day == "Sunday"
 fun shouldChangeWater(day: String, temp: Int = 22, dirty: Int = 20): Boolean {
     return when {
-        temp > 30 -> true
-        dirty > 30 -> true
-        day == "Sunday" -> true
+        isTooHot(temp) -> true
+        isDirty(dirty) -> true
+        isSunday(day) -> true
         else -> false
     }
 }
