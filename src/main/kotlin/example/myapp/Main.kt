@@ -1,4 +1,5 @@
 import example.myapp.Aquarium
+import example.myapp.TowerTank
 
 fun buildAquarium() {
 //    val aquarium1 = Aquarium()
@@ -20,8 +21,12 @@ fun buildAquarium() {
 //    val aquarium5 = Aquarium()
 //    aquarium5.printSize()
 
-    val aquarium6 = Aquarium(length = 25, width = 25, height = 40)
-    aquarium6.printSize()
+//    val aquarium6 = Aquarium(length = 25, width = 25, height = 40)
+//    aquarium6.printSize()
+    val myAquarium = Aquarium(width = 25, length = 25, height = 40)
+    myAquarium.printSize()
+    val myTower = TowerTank(diameter = 25, height = 40)
+    myTower.printSize()
 
     //println("Volume: ${aquarium6.width * aquarium6.length * aquarium6.height / 1000} liters")
 }
