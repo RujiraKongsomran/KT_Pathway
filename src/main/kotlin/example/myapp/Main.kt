@@ -1,4 +1,6 @@
 import example.myapp.Aquarium
+import example.myapp.Plecostomus
+import example.myapp.Shark
 import example.myapp.TowerTank
 
 fun buildAquarium() {
@@ -31,6 +33,14 @@ fun buildAquarium() {
     //println("Volume: ${aquarium6.width * aquarium6.length * aquarium6.height / 1000} liters")
 }
 
+fun makeFish(){
+    val shark = Shark()
+    val pleco = Plecostomus()
+
+    println("Shark: ${shark.color}")
+    println("Plecostomus: ${pleco.color}")
+}
+
 fun main() {
-    buildAquarium()
+    makeFish()
 }
