@@ -8,18 +8,22 @@ interface FishAction {
     fun eat()
 }
 
-class Shark : AquariumFish(), FishAction {
-    // Because color is abstract, the subclasses must implement it.
-    override val color = "grey"
+interface FishColor {
+    val color: String
+}
+
+class Shark : FishAction, FishColor {
+    override val color: String = "grey"
+
     // Implement eat()
     override fun eat() {
         println("hunt and eat fish")
     }
 }
 
-class Plecostomus : AquariumFish(), FishAction {
-    // Because color is abstract, the subclasses must implement it.
+class Plecostomus : FishAction, FishColor {
     override val color = "gold"
+
     // Implement eat()
     override fun eat() {
         println("eat algae")
