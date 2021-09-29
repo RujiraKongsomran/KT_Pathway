@@ -12,6 +12,10 @@ interface FishColor {
     val color: String
 }
 
+object GoldColor : FishColor {
+    override val color = "gold"
+}
+
 class Shark : FishAction, FishColor {
     override val color: String = "grey"
 
